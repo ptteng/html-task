@@ -1,0 +1,26 @@
+html{
+	font-size:  62.5%;
+    margin: 0;
+    }
+
+.c{
+	background-image:url(cc.jpg); 
+    background-size: 50%,30%;
+    height: 72rem;
+    width:100%;
+    background-repeat: no-repeat;
+   }
+
+.x{
+	color: blue;
+    background: none;
+   }
+
+::-webkit-input-placeholder{color:#c6c6cc;}
+
+.text{
+       margin-top: 8rem;
+       margin-left:2rem; 
+       height: 3rem;
+       background:none; 
+      }
