@@ -1,28 +1,29 @@
 html{font-size:62.5%;}
 body{margin:0;}
-.flex1{
+.header{
     display:flex;
-	  align-items:center;
-	  width:72rem;
+	align-items:center;
+	width:100%;
     height:8.2rem;
     font-size:3.6rem;
     background-color:#5fc0cd;
-	  color: white;
-    justify-content:flex-start;
+	color: white;
+    justify-content:center;
 }
-.flex1-1{
-    padding-left:3.1rem;
-    padding-right:18rem; 
+.header-1{
+    position: relative;
+    right: 33%; 
 }
 .flex2{
-    display:flex;
-	  background-image:url(img/背景.png);
-	  width:72rem;
-	  color:white;
+    display: flex;
+	background-image: url(img/背景.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    color: white;
 }
-.flex2-1{padding:8rem 4.3rem 8rem 3.1rem;}
-.flex2-2{padding:13.1rem 27.8rem 11.3rem 0rem;}
-.t1{font-size:3.6rem;}
+.flex2-1{margin: 8rem 4.2rem 8rem 3.1rem;}
+.flex2-2{margin-top: 11.4rem;}
+.t1{font-size: 3.6rem;}
 .t2{
     font-size:2.8rem;
     padding-left:3rem;
@@ -37,7 +38,7 @@ body{margin:0;}
     border-left:solid;
     border-color:#5fc0cd;
     padding-left: 3.1rem;
-    margin:3.6rem 0rem 3.6rem 3rem;
+    margin:3.6rem 0 3.6rem 3rem;
     font-size: 3.2rem;
 }
 table{
@@ -54,22 +55,22 @@ td{
     height:10.2rem;
     border-bottom:0.05rem solid black;
 }
-.b1{  
+.table-1{  
     padding-right:2.6rem; 
     padding-left:3.1rem; 
 }
-.b2{
+.table-2{
     padding-left:1rem;
     border-left:0.05rem solid #e1e5e7;
 }
-.b3{
+.table-3{
     margin-left:3.1rem;
     color:#999999;
     padding-right:2.6rem;
     border-right:0.05rem solid #e1e5e7;
 }
-.b4{color:red;}
-.b5{
+.table-4{color:red;}
+.table-5{
     font-size: 2.8rem;
     white-space:normal;
     padding-left:2rem;
@@ -81,8 +82,9 @@ td{
     border:none;
     font-size:3.6rem;
     margin-top: 10rem;
+    justify-content: center;
 }
-.ft-1{
+.footer-1{
     color:#5fc0cd;
     background-color:white;
     border-color:#5fc0cd;
@@ -92,7 +94,7 @@ td{
     margin-left:3.8rem; 
     border-radius:1.5rem;
 }
-.ft-2{
+.footer-2{
     color:white;
     border-left:2.8rem; 
     background-color:#5fc0cd;
