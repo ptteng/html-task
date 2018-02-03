@@ -97,7 +97,7 @@ select{
 }
 .footer{
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	height: 10rem;
 	align-items: center;
 	position: fixed;
