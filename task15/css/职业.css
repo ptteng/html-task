@@ -85,7 +85,8 @@ table {
 .nav-phone .subnav li a {
   color: #fff;
 }
-.nav-phone .menu:focus + .subnav {
+.nav-phone .menu:hover + .subnav,
+.nav-phone .subnav:hover {
   display: block;
 }
 @media only screen and (max-width: 750px) {
@@ -249,8 +250,8 @@ table {
   padding-right: 20px;
   padding-top: 8%;
 }
-.menu:hover + .subnav,
-.subnav:hover {
+.main-warp:hover + .hover,
+.hover:hover {
   display: block;
 }
 @media only screen and (max-width: 750px) {
