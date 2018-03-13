@@ -79,17 +79,20 @@ ul{
 	.subnav{
 		display: none;
 		text-align: center;
+		.active{
+			border-bottom: solid #fff;
+		}
+		li:hover{
+			border-bottom: solid #fff;
+		}
 		li{
 			padding-top: 13px;
 			a{
 				color: @white;
 			}
-			a:hover{
-				border-bottom: 1.5px solid #fff;
-			}
 		}
 	}
-	.menu:focus+.subnav{
+	.menu:hover+.subnav,.subnav:hover{
 		display:block;
 	}
 }
@@ -113,10 +116,25 @@ ul{
 			}
 		}
 		a{	
-			padding: 5px;
+			padding: 5px 5px 36px 5px;
 			font-size: 25px;
 			color: @white;
 		}
+	}
+}
+@media screen and (min-width: 960px) {
+	.subnav{
+		a{
+			padding-bottom: 48px;
+		}
+	}
+}
+.active{
+		border-bottom: 3px solid #fff;
+	}
+.subnav{
+	a:hover{
+		border-bottom: 3px solid #fff;
 	}
 }
 .img{
@@ -147,6 +165,9 @@ ul{
 .main-left{
 	background-color: white;
 	padding: 0px;
+	.active{
+		color: #f1a750;
+	}
 }
 .main-left-text{
 	list-style: none;
@@ -173,6 +194,9 @@ ul{
 }
 .circle-solid{
 	background-color: #f1a750;
+}
+.main-left-company:hover .circle{
+	background: #f1a750;
 }
 /*main-right*/
 .main-right{
@@ -224,6 +248,9 @@ ul{
 	line-height: 40px;
     color: #29b078;
 }
+.main-left-company:hover .text{
+	color: #f1a750;
+}
 // footer
 @media only screen and (max-width: 750px){
 	.footer{
@@ -260,7 +287,14 @@ ul{
 			right: 4.5%;
 		}
 		.footer-right{
-			padding-left: 30px;
+			padding-left: 80px;
+		}
+	}
+}
+@media only screen and (min-width: 960px){
+	.footer{
+		.footer-right{
+			padding-left: 200px;
 		}
 	}
 }

@@ -79,17 +79,20 @@ ul{
 	.subnav{
 		display: none;
 		text-align: center;
+		.active{
+			border-bottom: solid #fff;
+		}
+		li:hover{
+			border-bottom: solid #fff;
+		}
 		li{
 			padding-top: 13px;
 			a{
 				color: @white;
 			}
-			a:hover{
-				border-bottom: 1.5px solid #fff;
-			}
 		}
 	}
-	.menu:focus+.subnav{
+	.menu:hover+.subnav,.subnav:hover{
 		display:block;
 	}
 }
@@ -113,10 +116,25 @@ ul{
 			}
 		}
 		a{	
-			padding: 5px;
+			padding: 5px 5px 36px 5px;
 			font-size: 25px;
 			color: @white;
 		}
+	}
+}
+@media screen and (min-width: 960px) {
+	.subnav{
+		a{
+			padding-bottom: 48px;
+		}
+	}
+}
+.subnav{
+	.active{
+		border-bottom: 3px solid #fff;
+	}
+	a:hover{
+		border-bottom: 3px solid #fff;
 	}
 }
 // 轮播图
@@ -325,7 +343,6 @@ ul{
 		box-shadow: 0 0 5px #999;
 	}
 	.company-a{
-		background-color: white;
 		width: 19%;
 		height: 70px;
 	}
@@ -352,14 +369,28 @@ ul{
 		padding-bottom: 15px;
 	}
 }
-ul{
-	display: inline-block;
-	padding-left: 38px; 
-  	list-style: disc;
-	.a-text{
-		color: #c6c6c6;
+.company{
+	a{
+		background-color: white;
 	}
 }
+// 友情链接
+.link{
+	padding-bottom: 5px;
+	text-align: center;
+	a:hover{
+		border-bottom: 1.5px solid @green;
+	}
+	ul{
+		display: inline-block;
+		padding-left: 38px; 
+	  	list-style: disc;
+		.a-text{
+			color: #c6c6c6;
+		}
+	}
+}
+
 // footer
 @media only screen and (max-width: 750px){
 	.footer{
@@ -396,7 +427,14 @@ ul{
 			right: 4.5%;
 		}
 		.footer-right{
-			padding-left: 30px;
+			padding-left: 80px;
+		}
+	}
+}
+@media only screen and (min-width: 960px){
+	.footer{
+		.footer-right{
+			padding-left: 200px;
 		}
 	}
 }

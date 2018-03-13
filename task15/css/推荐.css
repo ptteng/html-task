@@ -70,16 +70,20 @@ ul {
   display: none;
   text-align: center;
 }
+.nav-phone .subnav .active {
+  border-bottom: solid #fff;
+}
+.nav-phone .subnav li:hover {
+  border-bottom: solid #fff;
+}
 .nav-phone .subnav li {
   padding-top: 13px;
 }
 .nav-phone .subnav li a {
   color: #fff;
 }
-.nav-phone .subnav li a:hover {
-  border-bottom: 1.5px solid #fff;
-}
-.nav-phone .menu:focus + .subnav {
+.nav-phone .menu:hover + .subnav,
+.nav-phone .subnav:hover {
   display: block;
 }
 @media only screen and (max-width: 750px) {
@@ -102,10 +106,21 @@ ul {
     max-width: 100%;
   }
   .nav-pc a {
-    padding: 5px;
+    padding: 5px 5px 36px 5px;
     font-size: 25px;
     color: #fff;
   }
+}
+@media screen and (min-width: 960px) {
+  .subnav a {
+    padding-bottom: 48px;
+  }
+}
+.active {
+  border-bottom: 3px solid #fff;
+}
+.subnav a:hover {
+  border-bottom: 3px solid #fff;
 }
 .img {
   max-width: 100%;
@@ -136,6 +151,9 @@ ul {
   background-color: white;
   padding: 0px;
 }
+.main-left .active {
+  color: #f1a750;
+}
 .main-left-text {
   list-style: none;
   border: 1px solid #c9c9c9;
@@ -161,6 +179,9 @@ ul {
 }
 .circle-solid {
   background-color: #f1a750;
+}
+.main-left-company:hover .circle {
+  background: #f1a750;
 }
 /*main-right*/
 .main-right {
@@ -211,6 +232,9 @@ ul {
   line-height: 40px;
   color: #29b078;
 }
+.main-left-company:hover .text {
+  color: #f1a750;
+}
 @media only screen and (max-width: 750px) {
   .footer {
     position: relative;
@@ -247,7 +271,12 @@ ul {
     right: 4.5%;
   }
   .footer .footer-right {
-    padding-left: 30px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .footer .footer-right {
+    padding-left: 200px;
   }
 }
 .footer {

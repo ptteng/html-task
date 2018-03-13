@@ -73,14 +73,17 @@ table {
   display: none;
   text-align: center;
 }
+.nav-phone .subnav .active {
+  border-bottom: solid #fff;
+}
+.nav-phone .subnav li:hover {
+  border-bottom: solid #fff;
+}
 .nav-phone .subnav li {
   padding-top: 13px;
 }
 .nav-phone .subnav li a {
   color: #fff;
-}
-.nav-phone .subnav li a:hover {
-  border-bottom: 1.5px solid #fff;
 }
 .nav-phone .menu:focus + .subnav {
   display: block;
@@ -105,10 +108,21 @@ table {
     max-width: 100%;
   }
   .nav-pc a {
-    padding: 5px;
+    padding: 5px 5px 36px 5px;
     font-size: 25px;
     color: #fff;
   }
+}
+@media screen and (min-width: 960px) {
+  .subnav a {
+    padding-bottom: 48px;
+  }
+}
+.active {
+  border-bottom: 3px solid #fff;
+}
+.subnav a:hover {
+  border-bottom: 3px solid #fff;
 }
 /*main-title*/
 .main-title {
@@ -235,8 +249,8 @@ table {
   padding-right: 20px;
   padding-top: 8%;
 }
-.main-warp:hover + .hover,
-.hover:hover {
+.menu:hover + .subnav,
+.subnav:hover {
   display: block;
 }
 @media only screen and (max-width: 750px) {
@@ -275,7 +289,12 @@ table {
     right: 4.5%;
   }
   .footer .footer-right {
-    padding-left: 30px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .footer .footer-right {
+    padding-left: 200px;
   }
 }
 .footer {

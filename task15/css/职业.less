@@ -60,7 +60,6 @@ table{
 		display: none;
 	}
 }
-// nav for phone
 .nav-phone{
 	padding: @padding20;
 	align-items: center;
@@ -82,13 +81,16 @@ table{
 	.subnav{
 		display: none;
 		text-align: center;
+		.active{
+			border-bottom: solid #fff;
+		}
+		li:hover{
+			border-bottom: solid #fff;
+		}
 		li{
 			padding-top: 13px;
 			a{
 				color: @white;
-			}
-			a:hover{
-				border-bottom: 1.5px solid #fff;
 			}
 		}
 	}
@@ -116,10 +118,25 @@ table{
 			}
 		}
 		a{	
-			padding: 5px;
+			padding: 5px 5px 36px 5px;
 			font-size: 25px;
 			color: @white;
 		}
+	}
+}
+@media screen and (min-width: 960px) {
+	.subnav{
+		a{
+			padding-bottom: 48px;
+		}
+	}
+}
+.active{
+		border-bottom: 3px solid #fff;
+}
+.subnav{
+	a:hover{
+		border-bottom: 3px solid #fff;
 	}
 }
 /*main-title*/
@@ -248,9 +265,9 @@ table{
     padding-right: 20px;
     padding-top: 8%;
 }
-.main-warp:hover+.hover,.hover:hover{
-	display: block;
-}
+.menu:hover+.subnav,.subnav:hover{
+		display:block;
+	}
 
 // footer
 @media only screen and (max-width: 750px){
@@ -288,7 +305,14 @@ table{
 			right: 4.5%;
 		}
 		.footer-right{
-			padding-left: 30px;
+			padding-left: 80px;
+		}
+	}
+}
+@media only screen and (min-width: 960px){
+	.footer{
+		.footer-right{
+			padding-left: 200px;
 		}
 	}
 }

@@ -70,16 +70,20 @@ ul {
   display: none;
   text-align: center;
 }
+.nav-phone .subnav .active {
+  border-bottom: solid #fff;
+}
+.nav-phone .subnav li:hover {
+  border-bottom: solid #fff;
+}
 .nav-phone .subnav li {
   padding-top: 13px;
 }
 .nav-phone .subnav li a {
   color: #fff;
 }
-.nav-phone .subnav li a:hover {
-  border-bottom: 1.5px solid #fff;
-}
-.nav-phone .menu:focus + .subnav {
+.nav-phone .menu:hover + .subnav,
+.nav-phone .subnav:hover {
   display: block;
 }
 @media only screen and (max-width: 750px) {
@@ -102,10 +106,21 @@ ul {
     max-width: 100%;
   }
   .nav-pc a {
-    padding: 5px;
+    padding: 5px 5px 36px 5px;
     font-size: 25px;
     color: #fff;
   }
+}
+@media screen and (min-width: 960px) {
+  .subnav a {
+    padding-bottom: 48px;
+  }
+}
+.subnav .active {
+  border-bottom: 3px solid #fff;
+}
+.subnav a:hover {
+  border-bottom: 3px solid #fff;
 }
 #container {
   height: 240px;
@@ -340,7 +355,6 @@ ul {
     box-shadow: 0 0 5px #999;
   }
   .company-a {
-    background-color: white;
     width: 19%;
     height: 70px;
   }
@@ -367,12 +381,22 @@ ul {
     padding-bottom: 15px;
   }
 }
-ul {
+.company a {
+  background-color: white;
+}
+.link {
+  padding-bottom: 5px;
+  text-align: center;
+}
+.link a:hover {
+  border-bottom: 1.5px solid #29b078;
+}
+.link ul {
   display: inline-block;
   padding-left: 38px;
   list-style: disc;
 }
-ul .a-text {
+.link ul .a-text {
   color: #c6c6c6;
 }
 @media only screen and (max-width: 750px) {
@@ -411,7 +435,12 @@ ul .a-text {
     right: 4.5%;
   }
   .footer .footer-right {
-    padding-left: 30px;
+    padding-left: 80px;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .footer .footer-right {
+    padding-left: 200px;
   }
 }
 .footer {
