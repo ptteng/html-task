@@ -47,14 +47,16 @@ function begin(){
 	getColor(ar);
 }
 // 点击功能
-	var set;
+var set;
 function start(){
-	set = setInterval("begin()",1000);
+	if (set==undefined){set = setInterval("begin()",1300);
+	}
+	else {
+		return false;
+	}
 }
-// function start(){
-// 	setInterval("begin()",1000);
-// }
 function stop(){
 	clearInterval(set);
+	set=undefined;
 	reColor();
 }
